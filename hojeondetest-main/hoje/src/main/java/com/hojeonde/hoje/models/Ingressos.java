@@ -14,7 +14,7 @@ import java.util.UUID;
 public class Ingressos {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
-    private UUID id_ingresso;
+    private UUID idIngresso;
     private String Tipo;
     private String valor;
     private String quantidade;
