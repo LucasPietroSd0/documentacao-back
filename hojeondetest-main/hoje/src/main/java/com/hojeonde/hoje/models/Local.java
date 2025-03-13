@@ -14,8 +14,8 @@ import java.util.UUID;
 public class Local {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
-    private UUID id_local;
+    private UUID idLocal;
     private String nome;
-    private String endereço;
+    private String endereco;
     private String capacidade;
 }
