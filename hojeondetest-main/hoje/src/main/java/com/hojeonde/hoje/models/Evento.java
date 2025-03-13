@@ -15,11 +15,11 @@ import java.util.UUID;
 public class Evento {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
-    private UUID id_evento;
+    private UUID idEvento;
     private String name;
     private String descriçao;
-    private String data_inicio;
-    private String data_fim;
-    private String id_local;
-    private String id_organizador;
+    private String dataInicio;
+    private String dataFim;
+    private String idLocal;
+    private String idOrganizador;
 }
