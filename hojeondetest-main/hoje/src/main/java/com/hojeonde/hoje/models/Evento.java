@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity
-@Table (name = "evento")
+@Table (name = "eventos")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -14,10 +14,11 @@ import java.util.UUID;
 
 public class Evento {
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
+
     private UUID idEvento;
     private String name;
-    private String descriçao;
+    private String descricao;
     private String dataInicio;
     private String dataFim;
     private String idLocal;
