@@ -6,14 +6,14 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity
-@Table (name = "Local")
+@Table (name = "Locais")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Local {
     @Id
-    @GeneratedValue (strategy = GenerationType.AUTO)
+ @GeneratedValue(strategy = GenerationType.UUID)
     private UUID idLocal;
     private String nome;
     private String endereco;
