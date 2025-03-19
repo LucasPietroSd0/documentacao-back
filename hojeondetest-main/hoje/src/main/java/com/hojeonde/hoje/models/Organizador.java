@@ -8,14 +8,14 @@ import lombok.Setter;
 import java.util.UUID;
 
 @Entity
-@Table(name = "Organizador")
+@Table(name = "organizadores")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Organizador {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID idOrganizador;
     private String nome;
     private String email;
