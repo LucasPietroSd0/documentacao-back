@@ -23,4 +23,7 @@ public class Evento {
     private String dataFim;
     private String idLocal;
     private String idOrganizador;
+
+     @ManyToOne
+    Local local;
 }
