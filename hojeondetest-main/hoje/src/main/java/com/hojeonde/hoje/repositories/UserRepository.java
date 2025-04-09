@@ -3,5 +3,6 @@ package com.hojeonde.hoje.repositories;
 import com.hojeonde.hoje.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, String> {
+public interface UserRepository extends JpaRepository<User, Long> {
+     Optional<User> findByEmail(String email);
 }
