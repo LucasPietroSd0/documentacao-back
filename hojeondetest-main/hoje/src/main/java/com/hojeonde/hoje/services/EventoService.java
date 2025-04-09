@@ -39,7 +39,10 @@ public class EventoService {
         }
 
         // Adicionar outras validações de campos do evento conforme necessário
-
+ // Verificação se já existe um evento com o mesmo nome e data (ajustar conforme necessário)
+        if (eventoRepository.existsByNomeAndData(evento.getNome(), evento.getData())) {
+            throw new IllegalArgumentException("Já existe um evento com o nome '" + evento.getNome() + "' e data '" + evento.getData() + "'");
+        }
         return eventoRepository.save(evento);
     }
 
