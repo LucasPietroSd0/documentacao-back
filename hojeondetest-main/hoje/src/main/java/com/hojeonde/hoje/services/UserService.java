@@ -6,9 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
+
     @Autowired
     private UserRepository userRepository;
 
@@ -17,15 +19,31 @@ public class UserService {
     }
 
     public User findById(Long id) {
-        return userRepository.findById(String.valueOf(id)).orElse(null);
+        Optional<User> user = userRepository.findById(id);
+        if (user.isPresent()) {
+            return user.get();
+        } else {
+            throw new IllegalArgumentException("Usuário com ID " + id + " não encontrado.");
+        }
     }
 
     public User save(User user) {
+        // Verifica se já existe um usuário com mesmo email
+        Optional<User> existingUser = userRepository.findByEmail(user.getEmail());
+
+        if (existingUser.isPresent()) {
+            throw new IllegalArgumentException("Já existe um usuário com o e-mail: " + user.getEmail());
+        }
+
         return userRepository.save(user);
     }
 
     public void delete(Long id) {
-        userRepository.deleteById(String.valueOf(id));
+        Optional<User> user = userRepository.findById(id);
+        if (user.isPresent()) {
+            userRepository.deleteById(id);
+        } else {
+            throw new IllegalArgumentException("Não é possível deletar. Usuário com ID " + id + " não encontrado.");
+        }
     }
 }
-
