@@ -49,8 +49,6 @@ Resposta:
 Exemplo de Resposta:
 
 json
-Copiar
-Editar
 [
   {
     "id": "1",
@@ -84,8 +82,6 @@ Resposta:
 Exemplo de Resposta:
 
 json
-Copiar
-Editar
 {
   "id": "1",
   "nome": "Evento A",
@@ -100,8 +96,7 @@ Cria um novo evento com os dados fornecidos no corpo da requisição.
 Corpo da Requisição (JSON):
 
 json
-Copiar
-Editar
+
 {
   "nome": "Evento C",
   "descricao": "Descrição do Evento C",
@@ -117,8 +112,7 @@ Resposta:
 Exemplo de Resposta:
 
 json
-Copiar
-Editar
+
 {
   "id": "3",
   "nome": "Evento C",
