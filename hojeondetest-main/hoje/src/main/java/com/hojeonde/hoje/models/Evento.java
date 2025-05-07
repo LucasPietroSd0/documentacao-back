@@ -42,10 +42,9 @@ Representa o identificador único do evento. Ele é gerado automaticamente com b
 
 Exemplo:
 
-java
-Copiar
-Editar
-private UUID idEvento;
+
+    
+    private UUID idEvento;
 2. nome (String)
 Tipo: String
 Descrição:
@@ -53,9 +52,8 @@ O nome do evento, como "Festa de Aniversário" ou "Show de Rock". Este é um atr
 
 Exemplo:
 
-java
-Copiar
-Editar
+
+
 private String nome;
 3. descricao (String)
 Tipo: String
@@ -64,9 +62,7 @@ Uma descrição detalhada sobre o evento. Este atributo pode conter informaçõe
 
 Exemplo:
 
-java
-Copiar
-Editar
+
 private String descricao;
 4. dataInicio (String)
 Tipo: String
@@ -75,9 +71,7 @@ A data de início do evento, representada como uma string. Idealmente, deveria s
 
 Exemplo:
 
-java
-Copiar
-Editar
+
 private String dataInicio;
 5. dataFim (String)
 Tipo: String
@@ -86,9 +80,7 @@ A data de término do evento, também representada como uma string. Similar ao a
 
 Exemplo:
 
-java
-Copiar
-Editar
+
 private String dataFim;
 6. idLocal (String)
 Tipo: String
@@ -97,9 +89,7 @@ O identificador do local onde o evento será realizado. Este é um identificador
 
 Exemplo:
 
-java
-Copiar
-Editar
+
 private String idLocal;
 7. idOrganizador (String)
 Tipo: String
@@ -108,9 +98,7 @@ O identificador do organizador do evento. Assim como o idLocal, é uma referênc
 
 Exemplo:
 
-java
-Copiar
-Editar
+
 private String idOrganizador;
 8. local (Local)
 Tipo: Local
@@ -119,9 +107,6 @@ Este é um relacionamento ManyToOne com a entidade Local, o que significa que um
 
 Exemplo:
 
-java
-Copiar
-Editar
 @ManyToOne
 Local local;
 Anotações JPA e Lombok
